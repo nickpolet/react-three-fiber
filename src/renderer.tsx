@@ -76,7 +76,8 @@ export function renderGl(
 
   // Decrease frame count
   state.current.frames = Math.max(0, state.current.frames - 1)
-  repeat += !state.current.invalidateFrameloop ? 1 : state.current.frames
+  //repeat += !state.current.invalidateFrameloop ? 1 : state.current.frames
+  repeat = 0;
   // Render content
   if (!state.current.manual && state.current.gl.render)
     state.current.gl.render(state.current.scene, state.current.camera)
